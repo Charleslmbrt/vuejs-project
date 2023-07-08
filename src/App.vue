@@ -11,7 +11,7 @@
 
 //import components
 import MyFirstComponent from './components/MyFirstComponent.vue';
-import FruitList from './components/FruitList.vue';
+import FruitList from './components/FruitList/FruitList.vue';
 
 export default {
   name: 'App',
