@@ -5,6 +5,7 @@
 </template>
 <script>
 export default {
+    name : "MyFirstComponent",
     data() {
         return {
             txt : "Hello World"
