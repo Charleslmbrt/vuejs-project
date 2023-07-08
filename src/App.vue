@@ -3,7 +3,7 @@
     <img alt="Vue logo" src="./assets/logo.png">
   
  <my-first-component></my-first-component>
- <fruit-list></fruit-list>
+ <fruit-list v-bind:name="name"></fruit-list>
   </div>
 </template>
 
@@ -18,6 +18,14 @@ export default {
   components: {
       'my-first-component' : MyFirstComponent,
       'fruit-list' : FruitList
+  },
+  data() {
+    return {
+      name : {
+        firstname : 'Camille',
+        lastname : 'Dupond'
+      }
+    }
   }
 }
 </script>

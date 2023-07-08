@@ -1,7 +1,12 @@
 <template>
-    <ul class="list">
-<li v-for="(fruit, index) in arrayOfFruits" v-bind:key="index">{{ fruit }}</li>
-    </ul>
+    <div>
+        <ul class="list">
+            <li v-for="(fruit, index) in arrayOfFruits" v-bind:key="index">{{ fruit }}</li>
+        </ul>
+        <p>{{ name.firstname }} {{ name.lastname }}</p>
+        <p>{{ reversing() }}</p>
+   
+    </div>
 </template>
 <script>
 export default {
@@ -9,6 +14,12 @@ export default {
     data() {
         return {
             arrayOfFruits : ['pomme', 'poire', 'fraise', 'banane']
+        }
+    },
+    props : ['name'],
+    methods : {
+        reversing : function() {
+            return this.name.firstname.split('').reverse().join('')
         }
     }
 }
